@@ -1,0 +1,171 @@
+/* Display Properties */
+
+/* block elements
+1. new line 
+2. width - from extreme left to extreme right
+3. custom width and height - respect 
+4. custom margin and padding - respect
+
+inline elements
+1. same line 
+2. width - content width 
+3. custom width and height - do not respect
+4. custom margin in horizontal direction applicable and padding is also applicable
+
+inline-block -> behaves as inline and we can set custome width and height, margin and padding */
+
+
+
+/* Position Property */
+
+/* 1. Static - by default all tag has static property
+2. Relative - With this is property we can set the position of the tag with respect to our current window using top,left,bottom,right and the space for that element which was before for that will be maintained as it is
+3. Absolute - It is like relative but it is relative to its closest ancestor and its space also will not be maintained
+4. Fixed - With this position of that element will not change even on scroll 
+5. Sticky - It is like fixed but it will be sticky until its parent container is in the current window if its parent go up on scroll then it will also go along with its parent but fixed element will not change its position */
+
+
+
+/* Units */
+
+/* 1. % - Relative to its immediate parent
+2. vh/vw - Relative to viewport eg:- 100vh(means 100% of viewport height)
+3. px - 1/96 of inch
+4. em - relative to its parent's font-sieze (default 16px) eg:- 10em(means font-size of its parent container multiply by 10 in this case 160 px if we set parent's font size to 10 px then it will become 100 px)
+5. rem - relative to root element eg:- 5rem(means 5 multiply by 16px = 80px); */
+
+
+
+/* Flexbox */
+
+/* by default horizontal axis -> main axis
+by default vertical axis -> cross axis */
+
+/* .container{
+    background-color: beige;
+    border: 5px solid black;
+    margin: 2px;
+    padding: 2px;
+    height: 1200px;
+    display: flex;
+    flex-direction: row; by default row
+    flex-direction:column column-reverse row(default) row-reverse;
+    flex-wrap: wrap;     with these box will go to next line when screen size is short
+    flex-wrap: wrap nowrap(default) wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    justify-content
+        places the elements according to main axis if flex direction is row then main axis will be horizontal and flex direction is column then main axis will be vertical
+        start           
+        end
+        center
+        space-between  --> first and last box will be touched with boundary and the space between other boxes will be same
+        space-around  --> in this the space between first and last box also will be same
+        space-evenly  --> works same as space around but the space between two boxes will not be twice as space between box and boundary (this situation is in space around)
+   
+
+    align-items
+        works corresponding to cross axis if flex direction is row then cross axis will be vertical and flex direction is column then cross axis will be horizontal
+        center
+        start
+        end
+        stretch (default)- the height of box will be same as the height of the container only if the height of box is not defined
+   
+    
+    to center the content use justify-content:center and align-items:center
+
+    1. align-content:
+    Purpose: It adjusts the spacing between rows or columns in a container.
+    Applicable To: Containers with multiple lines of content (e.g., flex-wrap is used, or grid containers with multiple rows).
+    Alignment Context: Distributes space along the cross-axis between the flex lines or grid rows/columns.
+    Values:
+    flex-start: Rows are packed at the start of the cross-axis.
+    flex-end: Rows are packed at the end of the cross-axis.
+    center: Rows are packed in the center of the cross-axis.
+    space-between: Rows are evenly spaced, with no extra space at the start or end.
+    space-around: Rows are evenly spaced, with equal space around them.
+    space-evenly: Rows are evenly distributed, with equal space between and around them.
+    stretch: Rows are stretched to fill the container (default).
+    2. align-items:
+    Purpose: Aligns individual items inside a flex or grid container relative to the cross-axis.
+    Applicable To: Containers with single or multiple lines of content.
+    Alignment Context: Determines how the items themselves are aligned along the cross-axis within their respective line.
+    Values:
+    flex-start: Items are aligned at the start of the cross-axis.
+    flex-end: Items are aligned at the end of the cross-axis.
+    center: Items are aligned at the center of the cross-axis.
+    stretch: Items stretch to fill the container along the cross-axis (default).
+    baseline: Items align with their baselines.
+    Key Difference:
+    align-content: Spacing between lines.
+    align-items: Alignment of individual items within their line.
+
+} 
+.box{
+    height: 200px;
+    width: 200px;
+    border: 2px solid brown;
+    margin: 2px;
+    padding: 2px;
+}
+#box1{
+    background-color: aqua;
+    order: 500;   this will make the box at the last
+    flex-shrink: 4; this box will shrink a 4x speed while other will at x: ;
+    flex-grow: ; 
+    align-self: ;
+}
+#box2{
+    background-color: blue;
+}
+#box3{
+    background-color: orange;
+}   
+#box4{
+    background-color: brown;
+} */
+
+
+
+/* media query */
+
+/* .box{
+    height: 400px;
+    width: 400px;
+    background-color: aqua;
+    border: 3px solid black;
+} */
+/* @media (min-width:500px){
+    .box{
+        background-color: green;
+    }
+} */
+/* @media (min-width:300px) and (max-width:500px){
+    .box{
+        background-color: green;
+    }
+} */
+
+
+
+/* shadow effects */
+
+/* box-shadow: x-offset y-offset color
+box-shadow: x-offset y-offset blur-radius color
+box-shadow: x-offset y-offset blur-radius spread-radius color */
+
+
+
+/* text shadow */
+
+/* text-shadow: x-offset y-offset blur-radius color */
+
+
+
+/* variables in css
+--primary-color: brown;
+border: 2px solid var(--primary-color); 
+:root{
+    --primary-color: brown;  now we can use this variable anywhere
+}
+*/
