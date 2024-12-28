@@ -1,0 +1,28 @@
+.box{
+    height: 400px;
+    width: 400px;
+    background-color: beige;
+    border: 2px solid black;
+    transition-property: all;
+    transition-duration: 4s;
+    /* transition-delay: 1s; */
+    transition-timing-function: linear;
+
+    /* shorthand notation */
+
+    /* Apply to 1 property */
+    transition: property-name duration;
+    transition: property-name duration delay;
+    transition: property-name duration easing-function;
+    transition: property-name duration easing-function delay;
+
+    /* Apply to 2 properties */
+    transition: property-name duration property-name duration;
+
+    
+}
+.box:hover{
+    width: 1200px;
+    background-color: blue;  
+    /* because transition property is set to width we cannot see the transition of color so we have to set the transition property to all to see the transition of color */
+}

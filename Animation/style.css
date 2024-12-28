@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    border: 5px solid black;
+    background-color: beige;
+}
+.box{
+    width: 350px;
+    height: 80px;
+    border: 3px solid yellow;
+    background-color: blue;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    animation-name: rightMovement;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    /* ease(default) -> specifies an animation with slow start, then fast, then end slowly 
+    linear -> specifies an animation with same speed from start to end 
+    ease-in -> specifies an animation with a slow start
+    ease-out -> specifies an animation with a slow end
+    ease-in-out -> specifies an animation with a slow start and end */
+    animation-direction:normal;
+    /* reverse,alternate-reverse,alternate */
+    animation-fill-mode: forwards;
+    /* backwards, */
+    /* animation-play-state: paused,running; */
+    animation: duration easing-function delay iteration-count direction fill-mode play-state name;
+}
+@keyframes rightMovement {
+    from{
+        top: 0px;
+        left: 0px;
+    }
+    to{
+        top: 0px;
+        left: 1200px;
+    }   
+}
